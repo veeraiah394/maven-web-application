@@ -102,13 +102,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://35.154.192.126:8081/veeru/repository/facebook-release/</url>
+	      <url>http://3.109.108.167:8081/veeru/repository/facebook-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://35.154.192.126:8081/veeru/repository/facebook-snapshot/</url>
+	      <url>http://3.109.108.167:8081/veeru/repository/facebook-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
