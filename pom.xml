@@ -99,7 +99,7 @@
 	
 	<distributionManagement>
 	
-	    <Releserepository>
+	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
 	      <url>http://65.2.153.116:8081/veera/repository/facebook-release/</url>
