@@ -1,6 +1,6 @@
 node{
-// properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], 
-// pipelineTriggers([pollSCM('* * * * *')])])
+ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], 
+ pipelineTriggers([pollSCM('* * * * *')])])
 
 def mavenhome = tool name: "maven3.8.4"
 stage("checkout code"){
@@ -19,7 +19,7 @@ sh "${mavenhome}/bin/mvn deploy"
 }
 stage('deploy application into tomcat server'){
 sshagent(['f484da2e-10d2-4ff6-b2a7-4bc22a924410']) {
-sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.126.161.160:/opt/apache-tomcat-9.0.58/webapps/"
+sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.110.184.192:/opt/apache-tomcat-9.0.58/webapps/"
 
 }
 
