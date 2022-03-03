@@ -1,4 +1,4 @@
-node{
+node('nodes'){
  properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], 
  pipelineTriggers([pollSCM('* * * * *')])])
 
@@ -10,7 +10,7 @@ git branch: 'development', credentialsId: '5d0ed8ed-6853-4a75-ae86-e1aaa5c305ff'
 stage("build"){
 sh "${mavenhome}/bin/mvn clean package"
 }
-
+/*
 stage("excute sonarqube report"){
 sh "${mavenhome}/bin/mvn sonar:sonar"
 }
@@ -24,4 +24,5 @@ sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.
 }
 
 }
+*/
 }
